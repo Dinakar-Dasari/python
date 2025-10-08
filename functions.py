@@ -5,4 +5,4 @@ def addition(num1, num2):
 a = int(input("Enter a number: "))
 b = int(input("Enter another number: "))
 sum = addition(a,b)
-print(f"Sum is {sum}")
+print(f"Sum is {sum}")  
