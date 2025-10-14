@@ -1,10 +1,11 @@
 def update_server_config(file_path,key,value):
     # Read the existing content of the server configuration file and store in a variable
     with open(file_path,"r") as file:
-        lines = file.readlines()
+        lines = file.readlines()  # readlines() returns a list of all lines.
 
-    # edit the file
-    with open(file_path,'w') as file:
+    # edit the file         
+    # Opening a file in write mode 'w' truncates the file immediately — meaning all existing content is erased. Now, the file is empty, even if it had content before.
+    with open(file_path,'w') as file: 
         for line in lines:
             if key in line:
                 file.write(key + "=" + value + "\n")
